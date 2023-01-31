@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply h-full bg-no-repeat bg-cover bg-center font-body text-white text-base relative;
+  }
+
+  body.home {
+    @apply bg-[url('assets/home/background-home-desktop.jpg')];
+  }
+
+  .text-h1,
+  .text-h2,
+  .text-h3,
+  .text-h4 {
+    @apply font-display uppercase;
+  }
+
+  .text-h5 {
+    @apply font-body-alt uppercase text-purple text-h1;
+
+    letter-spacing: 0.27rem;
+  }
+
+  p {
+    line-height: 32px;
+  }
+}
