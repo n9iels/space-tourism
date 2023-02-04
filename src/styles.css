@@ -5,11 +5,15 @@
 @layer base {
   html,
   body {
-    @apply h-full bg-no-repeat bg-cover bg-center font-body text-white text-base relative;
+    @apply min-h-screen bg-no-repeat bg-cover bg-fixed bg-center font-body bg-black text-white text-base relative;
   }
 
   body.home {
-    @apply bg-[url('assets/home/background-home-desktop.jpg')];
+    @apply bg-[url('assets/home/background-home-mobile.jpg')] lg:bg-[url('assets/home/background-home-desktop.jpg')] md:bg-[url('assets/home/background-home-tablet.jpg')];
+  }
+
+  .font-body-alt {
+    @apply tracking-widest;
   }
 
   .text-h1,

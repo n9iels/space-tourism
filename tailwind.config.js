@@ -2,6 +2,12 @@
 module.exports = {
   content: ["./src/**/*.{html,ts}"],
   theme: {
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1440px",
+    },
     fontFamily: {
       display: '"Bellefair", serif',
       body: '"Barlow", sans-serif',
@@ -19,7 +25,7 @@ module.exports = {
       black: "#0B0D17",
       white: "#FFFFFF",
       purple: "#D0D6F9",
-      transparant: "rgba(0, 0, 0, 0.3)",
+      transparant: "rgba(255, 255, 255, 0.04)",
     },
     extend: {},
   },
