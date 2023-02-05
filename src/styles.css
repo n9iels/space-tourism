@@ -12,6 +12,10 @@
     @apply bg-[url('assets/home/background-home-mobile.jpg')] lg:bg-[url('assets/home/background-home-desktop.jpg')] md:bg-[url('assets/home/background-home-tablet.jpg')];
   }
 
+  body.destination {
+    @apply bg-[url('assets/destination/background-destination-mobile.jpg')] lg:bg-[url('assets/destination/background-destination-desktop.jpg')] md:bg-[url('assets/destination/background-destination-tablet.jpg')];
+  }
+
   .font-body-alt {
     @apply tracking-widest;
   }
