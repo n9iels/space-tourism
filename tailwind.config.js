@@ -14,6 +14,7 @@ module.exports = {
       "body-alt": '"Barlow Condensed", sens-serif',
     },
     fontSize: {
+      small: "0.88rem",
       base: "18px",
       h1: "8.34rem",
       h2: "5.55rem",
@@ -26,6 +27,10 @@ module.exports = {
       white: "#FFFFFF",
       purple: "#D0D6F9",
       transparant: "rgba(255, 255, 255, 0.04)",
+    },
+    letterSpacing: {
+      wide: "0.1em",
+      widest: "0.17em",
     },
     extend: {},
   },

@@ -1,7 +1,7 @@
 <header
   class="max-w-5xl mx-auto px-8 pb-24 xl:px-0 before:content-[''] lg:pb-0"
 >
-  <div class="absolute right-0 w-[60vw] lg:top-9">
+  <div class="absolute right-0 w-[65vw] lg:top-9 hidden sm:block lg:w-[60vw]">
     <div class="h-20 bg-transparant backdrop-blur-2xl"></div>
   </div>
   <div
@@ -13,11 +13,12 @@
     <div class="hidden h-[1px] bg-[#979797] z-20 lg:block xl:-ml-24">
       &nbsp;
     </div>
-    <nav class="justify-self-end z-10">
-      <ul class="flex space-x-12 font-body-alt uppercase">
+    <nav class="justify-self-end z-10 hidden sm:block">
+      <ul class="flex space-x-10 font-body-alt uppercase lg:space-x-12">
         <li *ngFor="let nav of navigation; let i = index">
           <a
             [routerLink]="nav.link"
+            class="text-small tracking-wide lg:text-base"
             [ngClass]="{ 'border-b-2 pb-[1.7rem]': isActiveRoute(nav.link) }"
           >
             <span

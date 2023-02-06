@@ -16,10 +16,6 @@
     @apply bg-[url('assets/destination/background-destination-mobile.jpg')] lg:bg-[url('assets/destination/background-destination-desktop.jpg')] md:bg-[url('assets/destination/background-destination-tablet.jpg')];
   }
 
-  .font-body-alt {
-    @apply tracking-widest;
-  }
-
   .text-h1,
   .text-h2,
   .text-h3,
@@ -28,9 +24,7 @@
   }
 
   .text-h5 {
-    @apply font-body-alt uppercase text-purple text-h1;
-
-    letter-spacing: 0.27rem;
+    @apply font-body-alt uppercase;
   }
 
   p {
