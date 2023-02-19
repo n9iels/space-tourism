@@ -1,0 +1,29 @@
+<div
+  class="text-center max-w-xl mx-auto pb-8 lg:grid lg:grid-cols-[1.6fr_1fr] lg:text-left lg:max-w-none"
+>
+  <div class="pb-8 flex justify-center lg:p-0 lg:block">
+    <ng-template
+      [ngTemplateOutlet]="templateLeft"
+      [ngTemplateOutletContext]="{ $implicit: items[activeTab] }"
+    ></ng-template>
+  </div>
+
+  <div>
+    <ul class="space-x-4 block">
+      <li class="inline-block" *ngFor="let item of items; let i = index">
+        <button
+          class="font-body-alt uppercase tracking-wide pb-2 hover:border-b-2"
+          [class.border-b-2]="i === activeTab"
+          (click)="setActiveTab(i)"
+        >
+          {{ item.name }}
+        </button>
+      </li>
+    </ul>
+
+    <ng-template
+      [ngTemplateOutlet]="templateRight"
+      [ngTemplateOutletContext]="{ $implicit: items[activeTab] }"
+    ></ng-template>
+  </div>
+</div>

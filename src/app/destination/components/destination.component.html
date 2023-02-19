@@ -1,1 +1,37 @@
-<shared-responsive-container> Destination </shared-responsive-container>
+<shared-responsive-container>
+  <h1 class="font-body-alt text-h5 tracking-widest mb-14">
+    <span class="opacity-40 mr-6 font-bold">01</span>Pick your destination
+  </h1>
+
+  <shared-tabs
+    *ngIf="destinations$ | async as destinations"
+    [items]="destinations"
+  >
+    <ng-template #left let-item>
+      <div *ngIf="typedDestination(item) as destination">
+        <img [src]="destination.images.png" />
+      </div>
+    </ng-template>
+    <ng-template #right let-item>
+      <div *ngIf="typedDestination(item) as destination">
+        <h2 class="text-h2">{{ destination.name }}</h2>
+        <p class="text-purple">{{ destination.description }}</p>
+        <hr class="mt-8 mb-4" />
+        <div class="flex justify-around lg:justify-between">
+          <div>
+            <span class="block text-small text-purple uppercase"
+              >Avg. distance</span
+            >
+            <span class="text-h4">{{ destination.distance }}</span>
+          </div>
+          <div>
+            <span class="block text-small text-purple uppercase"
+              >Est. travel time</span
+            >
+            <span class="text-h4">{{ destination.travel }}</span>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </shared-tabs>
+</shared-responsive-container>
