@@ -14,10 +14,12 @@
     </ng-template>
     <ng-template #right let-item>
       <div *ngIf="typedDestination(item) as destination">
-        <h2 class="text-h2">{{ destination.name }}</h2>
+        <h2 class="text-h3 sm:text-h2">{{ destination.name }}</h2>
         <p class="text-purple">{{ destination.description }}</p>
         <hr class="mt-8 mb-4" />
-        <div class="flex justify-around lg:justify-between">
+        <div
+          class="flex flex-col justify-around lg:justify-between sm:flex-row"
+        >
           <div>
             <span class="block text-small text-purple uppercase"
               >Avg. distance</span
